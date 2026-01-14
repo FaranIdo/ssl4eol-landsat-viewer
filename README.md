@@ -149,70 +149,6 @@ python scripts/view_samples.py --sample 0029460 --output ./previews
 
 Output files are named `{sample_id}_{season}_{date}.png` (e.g., `0029460_summer_20210622.png`).
 
-## API Reference
-
-The viewer exposes a REST API for programmatic access:
-
-### `GET /api/samples`
-
-Returns list of all sample IDs.
-
-**Response:**
-```json
-{
-  "samples": ["0000001", "0000002", ...],
-  "count": 250000
-}
-```
-
-### `GET /api/sample/<sample_id>`
-
-Returns metadata for a specific sample.
-
-**Response:**
-```json
-{
-  "sample_id": "0029460",
-  "timestamps": [
-    {"name": "LC08_..._20210315", "season": "Spring"},
-    {"name": "LC08_..._20210622", "season": "Summer"},
-    ...
-  ],
-  "bounds": {
-    "lat_min": 40.123,
-    "lat_max": 40.195,
-    "lon_min": -74.123,
-    "lon_max": -74.051,
-    "center_lat": 40.159,
-    "center_lon": -74.087
-  }
-}
-```
-
-### `GET /api/tile/<sample_id>/<timestamp>`
-
-Returns RGB PNG image for a specific sample and timestamp.
-
-**Response:** PNG image with bounds in headers:
-- `X-Bounds-LatMin`
-- `X-Bounds-LatMax`
-- `X-Bounds-LonMin`
-- `X-Bounds-LonMax`
-
-### `GET /api/nearest?lat=<lat>&lon=<lon>`
-
-Finds the nearest sample to given coordinates.
-
-**Response:**
-```json
-{
-  "sample_id": "0029460",
-  "distance_km": 12.5,
-  "sample_lat": 40.159,
-  "sample_lon": -74.087
-}
-```
-
 ## Dataset Information
 
 SSL4EO-L (Self-Supervised Learning for Earth Observation - Landsat) contains:
@@ -225,14 +161,10 @@ SSL4EO-L (Self-Supervised Learning for Earth Observation - Landsat) contains:
 
 Locations are sampled from 10,000 cities worldwide using a Gaussian distribution.
 
-## License
-
-MIT License - see [LICENSE](LICENSE) file.
-
 ## Credits
 
 - **SSL4EO-L Dataset**: [zhu-xlab/SSL4EO-S12](https://github.com/zhu-xlab/SSL4EO-S12)
-- **Paper**: Stewart et al., "SSL4EO-L: Datasets and Foundation Models for Landsat Imagery" (NeurIPS 2023)
+- **Paper**: [SSL4EO-L: Datasets and Foundation Models for Landsat Imagery](https://arxiv.org/abs/2306.09424) (NeurIPS 2023)
 - **TorchGeo**: Dataset loading via [TorchGeo](https://github.com/microsoft/torchgeo)
 
 ## Citation
