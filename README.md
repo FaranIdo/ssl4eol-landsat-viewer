@@ -2,6 +2,8 @@
 
 An interactive web-based viewer for exploring the [SSL4EO-L](https://github.com/zhu-xlab/SSL4EO-S12) Landsat satellite imagery dataset. Browse 250,000 locations worldwide with multi-temporal Landsat imagery directly in your browser.
 
+![SSL4EO-L Viewer Screenshot](assets/screenshot.png)
+
 ## Features
 
 - **Interactive Map Interface** - Leaflet.js-powered map with satellite and OpenStreetMap basemaps
