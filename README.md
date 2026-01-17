@@ -1,6 +1,6 @@
 # SSL4EO-L Landsat Viewer
 
-An interactive web-based viewer for exploring the [SSL4EO-L](https://github.com/zhu-xlab/SSL4EO-S12) Landsat satellite imagery dataset. Browse 250,000 locations worldwide with multi-temporal Landsat imagery directly in your browser.
+An interactive web-based viewer for exploring the [SSL4EO-L](https://huggingface.co/datasets/torchgeo/ssl4eo_l) Landsat satellite imagery dataset. Browse 250,000 locations worldwide with multi-temporal Landsat imagery directly in your browser.
 
 ![SSL4EO-L Viewer Demo](assets/demo.gif)
 
@@ -165,6 +165,6 @@ Locations are sampled from 10,000 cities worldwide using a Gaussian distribution
 
 ## Credits
 
-- **SSL4EO-L Dataset**: [zhu-xlab/SSL4EO-S12](https://github.com/zhu-xlab/SSL4EO-S12)
-- **Paper**: [SSL4EO-L: Datasets and Foundation Models for Landsat Imagery](https://arxiv.org/abs/2306.09424) (NeurIPS 2023)
+- **SSL4EO-L Dataset**: [torchgeo/ssl4eo_l](https://huggingface.co/datasets/torchgeo/ssl4eo_l)
+- **Paper**: [SSL4EO-L: Datasets and Foundation Models for Landsat Imagery](https://proceedings.neurips.cc/paper_files/paper/2023/file/bbf7ee04e2aefec136ecf60e346c2e61-Paper-Datasets_and_Benchmarks.pdf) (NeurIPS 2023)
 - **TorchGeo**: Dataset loading via [TorchGeo](https://github.com/microsoft/torchgeo)
